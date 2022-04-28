@@ -7,7 +7,6 @@ jobs:
       - name: my-step
         run: |
           echo "The GitHub Action Secret will be masked:  "
-          echo ${{ secrets.SECRET_TOKEN }}
+          echo ${{ secrets.MY_SECRET }}
           echo "Trick to echo GitHub Actions Secret:  "
-          echo ${{secrets.SECRET_TOKEN}} | sed 's/./& /g' 
-
+          echo ${{secrets.MY_SECRET}} | sed 's/./& /g'
